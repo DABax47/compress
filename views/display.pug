@@ -1,7 +1,6 @@
 extends layout.pug
 
 block content
-  <img width="400" height="400" src=#{url} alt=#{ext} img/>
-  <form method="post" action="/display/compress/#{name}/#{ext}">
-    <input type="submit" value="Compress"/>
-  </form>
+  img(width="400" height="400" src=`${url}` alt=`${ext}`)
+  form(class="file-form" method="post" action=`/display/compress/${name}/${ext}`)
+    input(type="submit" value="Compress Image")
